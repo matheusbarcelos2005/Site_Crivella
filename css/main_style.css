@@ -1,0 +1,186 @@
+/* =========================================================================
+   GLOBAL VARIABLES & RESETS
+   ========================================================================= */
+:root {
+    --brand-red: #e30613;
+    --brand-dark: #1f1f1f;
+    --brand-gray-light: #f8f9fa;
+    --brand-white: #ffffff;
+    --text-main: #333333;
+    --text-muted: #6c757d;
+    --transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-main);
+    background-color: var(--brand-white);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--brand-dark);
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+/* =========================================================================
+   CUSTOM UTILITIES
+   ========================================================================= */
+.text-crivella { color: var(--brand-red) !important; }
+.bg-crivella { background-color: var(--brand-red) !important; }
+
+.btn-crivella { 
+    background-color: var(--brand-red); 
+    border-color: var(--brand-red); 
+    color: white; 
+    transition: all 0.3s; 
+}
+.btn-crivella:hover { 
+    background-color: #c50510; 
+    border-color: #c50510; 
+    color: white; 
+    box-shadow: 0 6px 12px rgba(227, 6, 19, 0.3); 
+}
+
+/* =========================================================================
+   HERO SECTIONS (VIDEO & STATIC)
+   ========================================================================= */
+.hero {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+@media (max-width: 900px) {
+    .hero {
+        height: auto;
+        min-height: 100vh;
+        overflow: visible;
+    }
+}
+
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    z-index: -2;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0) 100%),
+                linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 30%);
+    z-index: -1;
+}
+
+.hero-content {
+    color: var(--brand-white);
+    max-width: 700px;
+    margin-top: 80px; 
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    color: var(--brand-white);
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    color: #e2e8f0;
+    font-size: 1.125rem;
+    margin-bottom: 2.5rem;
+    font-weight: 400;
+}
+
+/* STATIC IMAGE HERO */
+.hero-static-image {
+    width: 100vw;
+    min-height: 850px;
+    height: 90vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+
+.hero-static-image .hero-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(34,34,34,0.85) 40%, rgba(34,34,34,0.2) 80%, rgba(255,255,255,0.0) 100%);
+    z-index: 1;
+}
+
+.hero-static-image .hero-content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    padding: 3rem 2rem;
+    max-width: 700px;
+}
+
+@media (max-width: 900px) {
+    .hero-static-image {
+        min-height: 100vh !important;
+        height: auto !important;
+        padding: 6rem 1rem 2rem 1rem;
+    }
+    .hero-static-image .hero-content {
+        padding: 0;
+        margin-top: 0;
+    }
+}
+
+/* =========================================================================
+   WHATSAPP FAB (GLOBAL)
+   ========================================================================= */
+.fab-whatsapp {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    z-index: 1000;
+    transition: transform 0.3s;
+    text-decoration: none;
+}
+.fab-whatsapp:hover {
+    transform: scale(1.1);
+    color: white;
+}

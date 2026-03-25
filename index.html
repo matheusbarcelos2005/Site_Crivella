@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <title>Crivella - Excelência em Higiene e Limpeza</title>
+    <!-- Modern Sans-Serif Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+    <!-- Line Art Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/main_style.css">
+    <style>
+        /* Bootstrap Overrides para Fontes Globais */
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4, h5, h6, .navbar-brand {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .text-crivella { color: var(--brand-red, #e30613); }
+        .bg-crivella { background-color: var(--brand-red, #e30613); }
+        
+        /* Btn Crivella Hover */
+        .btn-crivella {
+            background-color: var(--brand-red, #e30613);
+            border-color: var(--brand-red, #e30613);
+            color: white;
+            transition: all 0.3s;
+        }
+        .btn-crivella:hover {
+            background-color: #c50510;
+            border-color: #c50510;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(227, 6, 19, 0.3);
+        }
+
+        /* Hero Overlay */
+        .hero-overlay-gradient {
+            background: linear-gradient(90deg, rgba(34,34,34,0.95) 10%, rgba(34,34,34,0.3) 70%, rgba(255,255,255,0.0) 100%);
+        }
+        
+        /* Floating Wpp Btn */
+        .fab-whatsapp {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background-color: #25D366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            z-index: 1000;
+            transition: transform 0.3s;
+            text-decoration: none;
+        }
+        .fab-whatsapp:hover {
+            transform: scale(1.1);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Sticky Navbar -->
+    <nav class="navbar navbar-expand-lg bg-white fixed-top shadow-sm py-3" id="navbar">
+        <div class="container">
+            <a class="navbar-brand py-0" href="index.html">
+                <img src="img/uploaded_media_1773161542389.png" alt="Crivella Logo" style="height: 64px; width: auto;">
+            </a>
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="ph ph-list fs-1 text-dark"></i>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav gap-lg-4 fw-bold text-uppercase" style="font-size: 0.9rem; letter-spacing: 0.5px;">
+                    <li class="nav-item"><a class="nav-link text-crivella" href="index.html">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="historia.html">HISTÓRIA</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="esg.html">ESG</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="produtos.html">PRODUTOS</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="marcas-proprias.html">MARCAS PRÓPRIAS</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="terceirizacao.html">TERCEIRIZAÇÃO</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="#contato">FALE CONOSCO</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="position-relative d-flex align-items-center" style="min-height: 100vh; padding-top: 100px;">
+        <!-- Background Wrapper to ensure valid positioning without cutting edges -->
+        <div class="position-absolute top-0 start-0 w-100 h-100" style="background-image: url('img/fundo_index.png'); background-size: cover; background-position: center;"></div>
+        <div class="position-absolute top-0 start-0 w-100 h-100 hero-overlay-gradient"></div>
+        
+        <div class="container position-relative text-white py-5" style="z-index: 2;">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h1 class="display-3 fw-bold mb-4">Excelência em Soluções Químicas Profissionais</h1>
+                    <p class="lead mb-5 fs-4" style="color: #e2e8f0; font-weight: 400;">
+                        Produtos desenvolvidos com rigor técnico para atender demandas industriais, hospitalares e institucionais, com foco em desempenho, segurança e sustentabilidade.
+                    </p>
+                    <div class="d-flex flex-column flex-md-row gap-3">
+                        <a href="produtos.html" class="btn btn-crivella btn-lg rounded-pill px-5 py-3 fw-bold">Ver Linha de Produtos</a>
+                        <a href="#contato" class="btn btn-outline-light btn-lg rounded-pill px-5 py-3 fw-bold">Solicitar Consultoria Técnica</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Alternating Sections (Marcas Próprias, Pet Care) -->
+    <section id="servicos-especiais" class="py-5 my-5">
+        <div class="container">
+
+            <!-- Row 1: Marcas Próprias -->
+            <div class="row align-items-center mb-5 pb-5 g-5" id="marcas-proprias">
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        class="img-fluid rounded-4 shadow-lg w-100" style="object-fit: cover; aspect-ratio: 4/3;" alt="Marcas Próprias Laboratório" loading="lazy">
+                </div>
+                <div class="col-lg-6 px-lg-4">
+                    <h2 class="fw-bold fs-1 mb-4 text-crivella">Marcas Próprias</h2>
+                    <p class="text-secondary fs-5 mb-4" style="line-height: 1.7;">Oferecemos desenvolvimento completo de marcas próprias, com processos controlados de formulação, testes laboratoriais e envase. Garantimos confidencialidade, rastreabilidade e conformidade regulatória em todas as etapas.</p>
+                    <ul class="list-unstyled mb-5">
+                        <li class="d-flex align-items-center gap-3 mb-3 fw-semibold fs-5 text-dark"><i class="ph ph-check-circle fs-3 text-crivella"></i> Formulações sob medida e exclusivas</li>
+                        <li class="d-flex align-items-center gap-3 mb-3 fw-semibold fs-5 text-dark"><i class="ph ph-check-circle fs-3 text-crivella"></i> Design e envase conforme especificação</li>
+                        <li class="d-flex align-items-center gap-3 mb-3 fw-semibold fs-5 text-dark"><i class="ph ph-check-circle fs-3 text-crivella"></i> Suporte técnico e regulatório</li>
+                    </ul>
+                    <a href="#contato" class="btn btn-crivella btn-lg rounded-pill px-5 fw-bold">SAIBA MAIS</a>
+                </div>
+            </div>
+
+            <!-- Row 2: Pet Care (Reverse) -->
+            <div class="row align-items-center mb-5 pb-lg-4 g-5">
+                <div class="col-lg-6 order-lg-2">
+                    <img src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        class="img-fluid rounded-4 shadow-lg w-100" style="object-fit: cover; aspect-ratio: 4/3;" alt="Pet Care Produtos" loading="lazy">
+                </div>
+                <div class="col-lg-6 order-lg-1 px-lg-4">
+                    <h2 class="fw-bold fs-1 mb-4 text-crivella">Divisão Pet Care</h2>
+                    <p class="text-secondary fs-5 mb-5" style="line-height: 1.7;">Entendemos que os animais exigem cuidados especiais. A nossa linha Pet Care é desenvolvida com pH balanceado e ativos seguros, promovendo a higiene e a saúde sem causar irritações.</p>
+                    <a href="#contato" class="btn btn-crivella btn-lg rounded-pill px-5 fw-bold">SAIBA MAIS</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Tecnologia e Inovação (P&D) -->
+    <section id="tecnologia" class="py-5 bg-light">
+        <div class="container py-5 my-4">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <img src="img/fotos_produtos/WhatsApp Image 2026-03-10 at 17.03.37.jpeg" class="img-fluid rounded-4 shadow-lg w-100" style="object-fit: cover; aspect-ratio: 16/9;" alt="Tecnologia Crivella" loading="lazy">
+                </div>
+                <div class="col-lg-6 px-lg-4">
+                    <h2 class="fw-bold fs-1 mb-4 text-crivella">Tecnologia e P&D</h2>
+                    <p class="text-secondary fs-5 mb-4" style="line-height: 1.7;">No coração da Crivella está a inovação. O nosso Laboratório de Pesquisa e Desenvolvimento trabalha incansavelmente para criar fórmulas que unem eficiência máxima, economia para a sua empresa e segurança ambiental.</p>
+                    <ul class="list-unstyled mt-4">
+                        <li class="d-flex align-items-center gap-3 mb-3 fw-semibold fs-5 text-dark"><i class="ph ph-flask fs-3 text-crivella"></i> Precisão química comprovada</li>
+                        <li class="d-flex align-items-center gap-3 mb-3 fw-semibold fs-5 text-dark"><i class="ph ph-shield-check fs-3 text-crivella"></i> Controle de qualidade Lean Seis Sigma</li>
+                        <li class="d-flex align-items-center gap-3 mb-3 fw-semibold fs-5 text-dark"><i class="ph ph-plant fs-3 text-crivella"></i> Insumos biodegradáveis e seguros</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer id="contato" class="py-5 bg-crivella text-white">
+        <div class="container py-lg-4">
+            <div class="row g-4 g-lg-5">
+
+                <!-- Coluna 1: Endereços e Contatos -->
+                <div class="col-lg-4">
+                    <div class="bg-white text-dark p-4 rounded-4 shadow h-100">
+                        <h5 class="fw-bold mb-4 text-uppercase text-crivella">CRIVELLA QUÍMICA INDUSTRIAL LTDA</h5>
+                        
+                        <div class="mb-3 px-3 py-2 bg-light rounded-3 border-start border-danger border-4">
+                            <strong class="d-block mb-1 fs-6">Matriz - Cachoeirinha - RS</strong>
+                            <span class="text-secondary small">Av. Cruzeiro 320 - Distrito Industrial<br>51 3074.2700<br>vendas02@Crivella.com.br</span>
+                        </div>
+
+                        <div class="mb-3 px-3 py-2 bg-light rounded-3 border-start border-danger border-4">
+                            <strong class="d-block mb-1 fs-6">São Paulo - SP</strong>
+                            <span class="text-secondary small">Av. Nadir Dias de Figueiredo 608</span>
+                        </div>
+
+                        <div class="mb-3 px-3 py-2 bg-light rounded-3 border-start border-danger border-4">
+                            <strong class="d-block mb-1 fs-6">Guarulhos - SP</strong>
+                            <span class="text-secondary small">Rua Pedro de Toledo 587</span>
+                        </div>
+
+                        <div class="mb-3 px-3 py-2 bg-light rounded-3 border-start border-danger border-4">
+                            <strong class="d-block mb-1 fs-6">Ribeirão Preto - SP</strong>
+                            <span class="text-secondary small">Rodovia Anhanguera Km 303</span>
+                        </div>
+
+                        <div class="mb-0 px-3 py-2 bg-light rounded-3 border-start border-danger border-4">
+                            <strong class="d-block mb-1 fs-6">Curitiba - PR</strong>
+                            <span class="text-secondary small">Rua Francisco de Paula Guimarães 70</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coluna 2: Formulário -->
+                <div class="col-lg-5">
+                    <div class="bg-white text-dark p-4 rounded-4 shadow h-100 d-flex flex-column">
+                        <h5 class="fw-bold mb-4 text-uppercase text-crivella">Solicite uma consultoria técnica</h5>
+                        <p class="text-secondary small mb-4 px-3 py-2 bg-light rounded-2 border-start border-danger border-3">Nossa equipe está pronta para entender as necessidades do seu negócio e propor soluções químicas sob medida. Preencha o formulário e retornaremos rapidamente.</p>
+                        <form action="#" method="POST" class="contact-form row g-3 flex-grow-1">
+                            <div class="col-md-6">
+                                <input type="text" class="form-control bg-light border-0 py-2 ps-3" name="nome" placeholder="Nome" required autocomplete="name">
+                            </div>
+                            <div class="col-md-6">
+                                <input type="email" class="form-control bg-light border-0 py-2 ps-3" name="email" placeholder="Email" required autocomplete="email">
+                            </div>
+                            <div class="col-md-6">
+                                <input type="tel" class="form-control bg-light border-0 py-2 ps-3" name="telefone" placeholder="Telefone" required autocomplete="tel">
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control bg-light border-0 py-2 ps-3" name="cep" placeholder="CEP" required autocomplete="postal-code">
+                            </div>
+                            <div class="col-12 flex-grow-1 d-flex">
+                                <textarea class="form-control bg-light border-0 py-2 ps-3 w-100" name="mensagem" placeholder="Mensagem" required rows="4" style="resize: vertical;"></textarea>
+                            </div>
+                            <div class="col-12 mt-3">
+                                <button type="submit" class="btn w-100 fw-bold py-3 text-white text-uppercase rounded-3 shadow-none border-0" style="background-color: #3b1910; transition: background 0.3s;">ENVIAR</button>
+                            </div>
+                            <div class="col-12 text-success fw-bold form-feedback" style="display:none; font-size: 0.95rem;">Mensagem enviada com sucesso!</div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Coluna 3: Localização (Mapa) -->
+                <div class="col-lg-3">
+                    <div class="bg-white text-dark p-4 rounded-4 shadow h-100 d-flex flex-column">
+                        <h5 class="fw-bold mb-3 text-uppercase text-crivella">LOCALIZAÇÃO</h5>
+                        <a href="https://maps.app.goo.gl/kj9UNx13DsA8iLmx9" target="_blank" class="fw-bold mb-4 d-inline-block text-decoration-none border-bottom pb-2 text-crivella">Abrir no Maps <i class="ph ph-arrow-square-out ms-1"></i></a>
+                        <div class="flex-grow-1 rounded-3 overflow-hidden border">
+                            <iframe 
+                                src="https://maps.google.com/maps?q=Crivella+Quimica+Industrial+LTDA,+Av.+Cruzeiro,+320+-+Distrito+Industrial,+Cachoeirinha+-+RS,+90240-590&hl=pt-BR&z=15&output=embed"
+                                class="w-100 h-100" style="min-height: 250px; border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/5511999999999" class="fab-whatsapp" target="_blank" aria-label="WhatsApp">
+        <i class="ph ph-whatsapp-logo"></i>
+    </a>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+    // Correção: fechar o menu mobile ao clicar num link
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            const navbarCollapse = document.getElementById('navbarNav');
+            if (navbarCollapse.classList.contains('show')) {
+                const bsCollapse = new bootstrap.Collapse(navbarCollapse);
+                bsCollapse.hide();
+            }
+        });
+    });
+
+    // Feedback visual ao enviar formulário
+    document.addEventListener('DOMContentLoaded', function() {
+        var form = document.querySelector('.contact-form');
+        if(form) {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                var feedback = form.querySelector('.form-feedback');
+                if(feedback) {
+                    feedback.style.display = 'block';
+                    setTimeout(function(){ feedback.style.display = 'none'; }, 4000);
+                }
+                form.reset();
+            });
+        }
+    });
+
+    // Mudar cor Navbar ao rolar
+    window.addEventListener('scroll', function() {
+        const navbar = document.getElementById('navbar');
+        if (window.scrollY > 50) {
+            navbar.classList.add('shadow');
+            navbar.classList.remove('shadow-sm');
+        } else {
+            navbar.classList.add('shadow-sm');
+            navbar.classList.remove('shadow');
+        }
+    });
+    </script>
+</body>
+</html>
